@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    
+    <link 
+        rel="stylesheet" 
+        href="{% static 'css/output.css' %}"
+        type="text/css"
+        />
+        <!-- output Tailwind CSS here -->
+</head>
+<body class="">
+    <header class="bg-gradient-to-r from-indigo-500 to-purple-600 shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <!-- Logo/Blog Title Area -->
+            <div class="mb-4 md:mb-0">
+            <a href="/" class="flex items-center">
+                <!-- Optional: Add your logo here -->
+                <!-- <img src="{% static 'images/logo.svg' %}" alt="Blog Logo" class="h-10 w-10 mr-3"> -->
+                <h1 class="text-3xl font-bold text-white hover:text-indigo-100 transition-colors">
+                My Blog
+                </h1>
+            </a>
+            <p class="text-sm text-indigo-100 mt-1">Exploring ideas and sharing knowledge</p>
+            </div>
+            
+            <!-- Navigation -->
+            <nav>
+            <ul class="flex flex-wrap gap-1 md:gap-2 items-center">
+                <li>
+                <a href="/" class="block px-3 py-2 text-white hover:bg-indigo-700 hover:text-white rounded-md transition-colors">
+                    Home
+                </a>
+                </li>
+                <li>
+                <a href="/" class="block px-3 py-2 text-white hover:bg-indigo-700 hover:text-white rounded-md transition-colors">
+                    Articles
+                </a>
+                </li>
+                <li>
+                <a href="/" class="block px-3 py-2 text-white hover:bg-indigo-700 hover:text-white rounded-md transition-colors">
+                    About
+                </a>
+                </li>
+                <li>
+                <a href="/" class="block px-3 py-2 text-white hover:bg-indigo-700 hover:text-white rounded-md transition-colors">
+                    Contact
+                </a>
+                </li>
+                <li class="ml-2">
+                <a href="/" class="block px-4 py-2 bg-white text-indigo-700 hover:bg-indigo-100 font-medium rounded-md transition-colors">
+                    Subscribe
+                </a>
+                </li>
+            </ul>
+            </nav>
+        </div>
+        </div>
+    </header>
+    
+        {% block content %}
+        {% endblock %}
+    
+</body>
+</html>

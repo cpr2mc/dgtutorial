@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-</head>
-<body>
-    <header>
-        <h1><a href="/">Chris Blog</a></h1>
-    </header>
+{% extends 'blog/base.html' %}
 
+{% block content %}
     {% for post in posts %}
-        <article>
-            <time>published: {{ post.published_date }}</time>
-            <h2><a href="">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
-        </article>
+        <div class="flex flex-col gap-2 p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4">
+            <div class="space-y-2 text-center sm:text-left">
+                <div class="space-y-0.5">
+                    <h2 class="text-lg font-semibold font-mono text-black"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                    <p class="text-sm text-gray-500">Published On: {{ post.published_date }}</p>
+                    <p class="text-base font-mono text-gray-500">{{ post.text|linebreaksbr }}</p>
+                </div>
+            </div>
+        </div>
     {% endfor %}
-</body>
-</html>
+{% endblock %}
