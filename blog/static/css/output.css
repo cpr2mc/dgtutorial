@@ -234,6 +234,9 @@
   .flex {
     display: flex;
   }
+  .inline-block {
+    display: inline-block;
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -299,6 +302,9 @@
   }
   .border-gray-300 {
     border-color: var(--color-gray-300);
+  }
+  .bg-gray-600 {
+    background-color: var(--color-gray-600);
   }
   .bg-indigo-600 {
     background-color: var(--color-indigo-600);
