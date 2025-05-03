@@ -1,3 +1,44 @@
 @import "tailwindcss";
 
 @source "../templates/**/*.html";
+
+/* Base styling for form fields */
+form p {
+margin-bottom: 1rem;
+}
+
+/* Target all input elements */
+form input, form textarea, form select {
+width: 100%;
+padding: 0.5rem;
+background-color: #f3f4f6;
+border: 2px solid #d1d5db;
+border-radius: 0.25rem;
+font-family: monospace;
+}
+
+/* Make text inputs look like textareas */
+form input[type="text"] {
+min-height: 2.5rem;
+}
+
+/* Make actual textareas larger */
+form textarea {
+min-height: 200px;
+}
+
+/* Style labels */
+form label {
+display: block;
+margin-bottom: 0.5rem;
+font-family: monospace;
+}
+
+/* Style error messages */
+form ul.errorlist {
+color: #ef4444;
+margin-bottom: 0.5rem;
+font-size: 0.875rem;
+list-style-type: none;
+padding-left: 0;
+}
