@@ -48,8 +48,8 @@
                 </a>
                 </li>
                 <li>
-                <a href="/" class="block px-3 py-2 text-white hover:bg-indigo-700 hover:text-white rounded-md transition-colors">
-                    Contact
+                <a href="{% url 'polls:index' %}" class="block px-3 py-2 text-white hover:bg-indigo-700 hover:text-white rounded-md transition-colors">
+                    Polls
                 </a>
                 </li>
                 {% if user.is_authenticated %}    
